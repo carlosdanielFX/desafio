@@ -7,14 +7,14 @@ Para isso:
   - Nome,
   - Id (identificador)
   - Descrição,
-  - Ano de lançamento, e
+  - Ano de lançamento, e  
   - Fabricante
 - Construa 5 métodos dentro dessa classe:
-  - salvar() (armazena um jogo)
-  - listar() (lista todos os jogos de uma instância ou objeto)
-  - listar(id_jogo) (lista apenas um jogo)
-  - deletar(id_jogo) (deleta apenas um jogo)
-  - atualizar(id_jogo) (atualiza um único jogo) 
+    - salvar() (armazena um jogo)
+    - listar() (lista todos os jogos de uma instância ou objeto)
+    - listar(id_jogo) (lista apenas um jogo)
+    - deletar(id_jogo) (deleta apenas um jogo)
+    - atualizar(id_jogo) (atualiza um único jogo) 
 - Crie uma instância da classe e salve no mínimo 5 jogos
 - Cada instância deverá criar seu próprio arquivo de banco de dados
   
