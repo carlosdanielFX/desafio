@@ -22,4 +22,3 @@ Para isso:
 - salve os dados em um documento .txt chamado de banco_de_dados
 - os dados não poderão ser perdidos, de modo que quando alguém usar o método Listar(), todos os jogos 
   salvos deverão ser retornados
-
