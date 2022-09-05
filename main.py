@@ -18,7 +18,12 @@ class Jogo:
         data_list = []
         data_list.append(data)
         df = pd.DataFrame.from_dict(data=data_list)
-        df.to_csv('dados.csv', index=False)
+        try:
+            pd.read_csv('dados.csv')
+            df.to_csv('dados.csv',index=True, header=False, mode='a')
+        except:
+            df.to_csv('dados.csv',index=True, header=True)
+
         
 
     def listar(self):
