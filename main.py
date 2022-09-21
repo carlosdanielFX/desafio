@@ -27,9 +27,8 @@ class Jogo:
         
 
     def listar(self):
-        Jogo = pd.read_excel('Banco_dados.xls')
-        filtered_df= Jogo.query(' Ano == 2020 ') 
-        print(filtered_df)    
+        Jogo = pd.read_csv('dados.csv')
+        print(Jogo)   
 
     def ExibirInformacoesDesteJogo(self):
          print (f'nome do jogo e: {self.nome}\nlancamento: {self.lancamento}\nfabricante: {self.fabricante}\nID e :{self.id}\n')
@@ -52,9 +51,11 @@ while entrada != 'x': # Enquanto entrada for diferente de x, rode a linha de bai
         lancamento = input('em qual ano seu jogo foi lançado: \n')
         jogo = Jogo(nome=nome, fabricante=fabricante, lancamento=lancamento)
         jogo.save()
-    elif entrada == 'l':
-        pass
-    
+while entrada != 'e':
+    entrada = input('Se voce deseja listar tabela use l para poder listar ou : \n use e para poder sair: \n')
+    if entrada == 'l':
+        jogo.listar()
+
 
 
 
