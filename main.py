@@ -27,33 +27,25 @@ class Jogo:
         
 
     def listar(self):
-        Jogo = pd.read_csv('dados.csv')
-        print(Jogo)   
+        jogo = pd.read_csv('dados.csv')
+        print(jogo)   
 
     def ExibirInformacoesDesteJogo(self):
-         print (f'nome do jogo e: {self.nome}\nlancamento: {self.lancamento}\nfabricante: {self.fabricante}\nID e :{self.id}\n')
+         print(f'nome do jogo e: {self.nome}\nlancamento: {self.lancamento}\nfabricante: {self.fabricante}\nID e :{self.id}\n')
 
-# save_do_call = input('Digite Salvar que seu game seja salvo: \n')
-# print('foi salvo')
-# lista = input('digite listar para mostrar game : \n')
-
-# call_of_duty = Jogo(nome ='call_of_duty', lancamento ='2019', fabricante='actvison', id='dadwad')
-# call_of_duty.listar()
-# call_of_duty.save()
 
 # Aqui começa a aplicaçao
 entrada = None
 while entrada != 'x': # Enquanto entrada for diferente de x, rode a linha de baixo
-    entrada = input('Você está na aplicação do carlos. Digite x para sair ou:  \n Digite s para salvar: \n')
+    entrada = input('Você está na aplicação do carlos. Digite x para sair ou:  \n Digite s para salvar: \n Digite l para listar: \n')
     if entrada == 's':
         nome = input('digite um nome para seu jogo: \n')
         fabricante = input('digite um fabricante para seu jogo: \n')
         lancamento = input('em qual ano seu jogo foi lançado: \n')
         jogo = Jogo(nome=nome, fabricante=fabricante, lancamento=lancamento)
         jogo.save()
-while entrada != 'e':
-    entrada = input('Se voce deseja listar tabela use l para poder listar ou : \n use e para poder sair: \n')
-    if entrada == 'l':
+    elif entrada == 'l':
+        jogo = Jogo()
         jogo.listar()
 
 
